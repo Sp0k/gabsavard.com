@@ -23,7 +23,7 @@ nav {
   margin-left: auto;
   margin-right: auto;
 
-  margin-top: 25px;
+  margin-top: 10px;
 
   width: 1250px;
 }
@@ -73,6 +73,7 @@ nav ul:hover li a:not(:hover) {
 
 footer {
   display: flex;
+  flex-direction: column;
 
   width: 1250px;
 
@@ -81,9 +82,28 @@ footer {
   margin-left: auto;
   margin-right: auto;
 
-  margin-top: 56px;
+  margin-top: 55px;
 }
-footer hr {
+footer p {
+  color: #E1E1E5;
+
+  font-family: "Poppins";
+  opacity: 0.6;
+
+  margin-top: 5px;
+}
+footer .foot-container {
+  display: flex;
+  width: 1250px;
+
+  margin-left: auto;
+  margin-right: auto;
+
+  justify-content: center;
+
+  margin-bottom: 0;
+}
+footer .foot-container hr {
   width: 75px;
   height: 1px;
 
@@ -91,7 +111,7 @@ footer hr {
 
   margin: auto 15px auto 15px;
 }
-footer a {
+footer .foot-container a {
   width: auto;
   height: auto;
 
@@ -102,9 +122,9 @@ footer a {
 
   transform: scale(0.8);
 }
-footer:hover a:hover {
+footer .foot-container:hover a:hover {
   transform: scale(0.9);
 }
-footer:hover a:not(hover) {
+footer .foot-container:hover a:not(hover) {
   transform: scale(0.6);
 }
