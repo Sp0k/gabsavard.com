@@ -18,6 +18,8 @@ if($_POST["message"]) {mail("contact@gabsavard.com", $_POST["subject"],$_POST["m
 
     <!-- JS -->
     <script src="scripts/clearForm.js"></script>
+    <script defer src="scripts/menu.js"></script>
+
 
     <!-- icon -->
     <link rel="icon" type="image/x-icon" href="assets/icons/favicon.ico">
@@ -26,13 +28,17 @@ if($_POST["message"]) {mail("contact@gabsavard.com", $_POST["subject"],$_POST["m
     <!-- Nav Bar -->
     <nav>
       <a href="/"><img src="assets/icons/favicon.ico" alt="website's logo">GS</a>
-      <ul>
-        <li><a href="/">Home</a></li>
-        <li><a href="/projects">Projects</a></li>
-        <li><a href="/blog">Blog</a></li>
-        <li style="text-decoration-line: underline;"><a href="/contact">Contact</a></li>
-        <li><a href="/about-me">About</a></li>
-      </ul>
+      <input type="checkbox" id="toggler" />
+      <label for="toggler" id="hamburger" class="" onclick="Rotating()"><i class="menubar">bar</i><i class="menubar">bar</i><i class="menubar">bar</i></label>
+      <div class="menu">
+        <ul>
+          <li style="text-decoration-line: underline;"><a href="/">Home</a></li>
+          <li><a href="projects">Projects</a></li>
+          <li><a href="blog">Blog</a></li>
+          <li><a href="contact">Contact</a></li>
+          <li><a href="about-me">About</a></li>
+        </ul>
+      </div>
     </nav>
     
     <hr> 

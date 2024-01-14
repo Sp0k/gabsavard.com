@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap');
 
+/* Normal view (desktop) */
 body {
   background: #303134;
  
@@ -16,7 +17,7 @@ nav {
   line-height: normal;
 
   display: flex;
-  align-items: center;
+  flex-wrap: wrap;
   text-align: center;
   justify-content: space-between;
 
@@ -25,13 +26,13 @@ nav {
 
   margin-top: 10px;
 
-  width: 1314px;
+  max-width: 1314px;
 }
 nav a {
   display: flex;
-
-  text-align: center;
+  
   align-items: center;
+  text-align: center;
 
   color: #E1E1E5;
 
@@ -53,8 +54,7 @@ nav ul {
   font-family: "Poppins", regular;
   display: flex;
   gap: 40px;
-}
-nav ul li {
+  
   list-style: none;
 }
 nav ul li a {
@@ -70,12 +70,69 @@ nav ul:hover li a:not(:hover) {
   opacity: 0.3;
   filter: blur(1px);
 }
+#toggler, nav label {
+  display: none;
+
+  transition: 0.5s ease;
+}
+.menubar {
+  width: 40px;
+  height: 5px;
+  background-color: #E1E1E5;
+  margin: 3px 0;
+  transition: 0.4s ease;
+
+  font-size: 0;
+
+  border-radius: 10px;
+}
+label.rotated {
+  rotate: -90deg;
+}
+@media screen and (max-width: 935px) {
+  .menu {
+    width: 100%;
+    max-height: 0;
+    overflow: hidden;
+
+    position: absolute;
+    top: 90px;
+
+    transition: 0.5s ease;
+
+    border-bottom: 0px solid #E1E1E5;
+
+    display: flex;
+    flex-direction: column;
+
+    background: #303134;
+
+    border-radius: 40px;
+  }
+  ul {
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+  }
+  nav label {
+    display: inline-flex;
+    align-items: center;
+    cursor: pointer;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    margin-right: 10px;
+  }
+  #toggler:checked ~ .menu {
+    max-height: 400px;
+  }
+}
 
 footer {
   display: flex;
   flex-direction: column;
 
-  width: 1250px;
+  max-width: 1250px;
 
   justify-content: center;
 
@@ -94,7 +151,7 @@ footer p {
 }
 footer .foot-container {
   display: flex;
-  width: 1250px;
+  max-width: 1250px;
 
   margin-left: auto;
   margin-right: auto;
@@ -127,4 +184,63 @@ footer .foot-container:hover a:hover {
 }
 footer .foot-container:hover a:not(hover) {
   transform: scale(0.6);
+}
+
+/* Landscape tablet view */
+@media screen and (max-width: 1279px) {
+  nav {
+    max-width: 1000px;
+
+    font-size: 20px;
+  }
+  nav ul {
+    gap: 30px;
+  }
+  footer {
+    max-width: 1000px;
+
+  }
+  footer .foot-container {
+    max-width: 1000px;
+  }
+  footer p {
+    font-size: 15px;
+  }
+}
+
+/* Portrait tablet view */
+@media screen and (max-width: 935px) {
+  
+
+  footer {
+    margin-top: 187px;
+  }
+}
+
+/* Mobile view */
+@media screen and (max-width: 414px) {
+  footer {
+    margin-top: 68px;
+  }
+  footer {
+    max-width: 340px;
+  }
+  footer .foot-container {
+    max-width: 340px;
+  }
+  footer .foot-container a {
+    transform: scale(0.6);
+    margin-left: 6px;
+    margin-right: 6px;
+  }
+  nav ul {
+    gap: 60px;
+  }
+  .menu {
+    padding-bottom: 0;
+  }
+  #toggler:checked ~ .menu {
+    max-height: 500px;
+    padding-bottom: 400px;
+  }
 }
