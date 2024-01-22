@@ -108,6 +108,8 @@ label.rotated {
     background: #303134;
 
     border-radius: 40px;
+
+    z-index: 100;
   }
   ul {
     flex-direction: column;
@@ -187,7 +189,7 @@ footer .foot-container:hover a:not(hover) {
 }
 
 /* Landscape tablet view */
-@media screen and (max-width: 1279px) {
+@media screen and (max-width: 1280px) {
   nav {
     max-width: 1000px;
 
@@ -210,8 +212,6 @@ footer .foot-container:hover a:not(hover) {
 
 /* Portrait tablet view */
 @media screen and (max-width: 935px) {
-  
-
   footer {
     margin-top: 187px;
   }

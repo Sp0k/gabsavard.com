@@ -192,3 +192,144 @@ textarea:focus {
   background: none;
   outline: none;
 }
+@media screen and (max-width: 1280px) {
+  main {
+    width: 1000px;
+
+    justify-content: space-evenly;
+  }
+  hr {
+    width: 800px;
+  }
+
+  .left {
+    margin-right: 0;
+  }
+  .right {
+    margin-left: 0;
+  }
+
+  .links {
+    width: 200px;
+    height: 53px;
+
+    font-size: 22px;
+  }
+  .left .links img {
+    width: 25px;
+  }
+  .left img {
+    width: 200px;
+  }
+
+  form {
+    width: 550px;
+    height: 550px;
+  }
+  label {
+    margin-left: 20px;
+  }
+  input[type=text] {
+    width: 475px;
+    height: 45px;
+    font-size: 20px;
+  }
+  textarea {
+    width: 475px;
+    height: 225px;
+    font-size: 20px;
+  }
+  form p {
+    font-size: 16px;
+  }
+  input[type=submit] {
+    width: 200px;
+    height: 55px;
+    font-size: 20px;
+  }
+}
+
+@media screen and (max-width: 935px) {
+  main {
+    width: 760px;
+  }
+
+  hr {
+    width: 550px;
+  }
+
+  form {
+    width: 450px;
+    height: 575px;
+  }
+  input[type=text] {
+    width: 375px;
+    height: 45px;
+  }
+  textarea {
+    width: 375px;
+  }
+  form p {
+    font-size: 16px;
+    width: 420px;
+  }
+}
+
+@media screen and (max-width: 414px) {
+  main {
+    display: grid;
+    grid-template-areas:
+      "nav"
+      "left"
+      "right"
+      "footer";
+
+      width: 350px;
+
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+
+  .left {
+    display: flex;
+    flex-direction: column;
+
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+  }
+  .left img {
+    display: none;
+  }
+
+  hr {
+    width: 300px;
+  }
+
+  .links {
+    width: 320px;
+    height: 70px;
+
+    font-size: 26px;
+  }
+  .left .links img {
+    width: 35px;
+  }
+
+  form {
+    width: 340px;
+  }
+  input[type=text] {
+    width: 280px;
+    font-size: 18px;
+  }
+  textarea {
+    width: 280px;
+    font-size: 18px;
+  }
+  form p {
+    font-size: 14px;
+    width: 280px;
+  }
+}

@@ -78,7 +78,7 @@ main img {
   margin-right: -60px;
 }
 
-@media screen and (max-width: 1279px) {
+@media screen and (max-width: 1280px) {
   hr {
     width: 750px;
   }
